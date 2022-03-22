@@ -20,8 +20,8 @@ pipeline {
   post {
     always {
       mail to:'helloyams@gmail.com'
-      subject: 'Completed pipeline'
-      body: 'First pipeline completed successfully'
+      subject:'Completed pipeline'
+      body:'First pipeline completed successfully'
     }
   }
 }
