@@ -1,18 +1,21 @@
 pipeline {
   agent any
   stages {
-    stage("Docker build")
+    stage("Docker build") {
       steps {
         sh 'docker buildx build --platform=linux/amd64 -t yamsnd/firstdockerrepo:0:1 .' 
       }
-    stage("Docker login")
+    }
+    stage("Docker login") {
       steps {
         sh 'docker login --username yamsnd --password krvamykoya@1' 
       }
-    stage("Docker push")
+    }
+    stage("Docker push") {
       steps {
         sh 'docker push yamsnd/firstdockerrepo ' 
       }
+    }
   }
   post {
     always {
