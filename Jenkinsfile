@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage("Docker build") {
       steps {
-        sh 'docker buildx build --platform=linux/amd64 -t yamsnd/firstdockerrepo:0:1 .' 
+        sh 'docker buildx build --platform=linux/amd64 -t yamsnd/firstdockerrepo .' 
       }
     }
     stage("Docker login") {
