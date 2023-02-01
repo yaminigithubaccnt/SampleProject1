@@ -8,7 +8,7 @@ pipeline {
     }
     stage("Docker login") {
       steps {
-        sh 'docker login --username yamsnd --password krvamykoya@1' 
+        sh 'docker login --username  --password ' 
       }
     }
     stage("Docker push") {
